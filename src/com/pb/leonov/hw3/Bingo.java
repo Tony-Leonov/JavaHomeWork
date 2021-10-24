@@ -36,8 +36,8 @@ public class Bingo {
             }
 
             if (!value.equals(x)) {
-                Integer a1 = new Integer(x);
-                Integer a2 = new Integer(value);
+                Integer a1 = new Integer(x); // Форматирование строки в число
+                Integer a2 = new Integer(value); // Форматирование строки в число
 
                 if (a1  > a2) {
                     System.out.println("Не угадали. Подсказка - загаданное число, больше");

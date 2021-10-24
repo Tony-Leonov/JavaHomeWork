@@ -4,5 +4,7 @@ public class Test3 {
         int y = 3;
         System.out.println(x/(float)y);
 
+
     }
 }
+
