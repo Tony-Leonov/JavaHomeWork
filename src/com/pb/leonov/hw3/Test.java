@@ -8,7 +8,5 @@ public class Test {
         int x = random.nextInt(101);
         System.out.println("rand x: " + x);
 
-        double y = Math.random();
-        System.out.println("rand y: " + y);
     }
 }
