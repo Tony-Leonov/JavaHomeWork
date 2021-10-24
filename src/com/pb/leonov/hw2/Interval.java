@@ -10,7 +10,7 @@ public class Interval {
 
         int in_entry = in.nextInt();
 
-        if (in_entry <= 14) {
+        if (in_entry >= 0 & in_entry <= 14) {
             System.out.println("Число попадает в промежуток [0-14]");
             return;
         }
