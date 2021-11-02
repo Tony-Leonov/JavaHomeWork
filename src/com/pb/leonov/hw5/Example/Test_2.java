@@ -1,3 +1,5 @@
+package com.pb.leonov.hw5.Example;
+
 import s01object.Phone;
 
 import static java.util.Arrays.*;
