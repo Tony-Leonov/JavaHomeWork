@@ -1,4 +1,4 @@
-package s01object;
+package com.pb.leonov.hw5.Example.s01object;
 
 public class PhoneTest {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package s01object;
+package com.pb.leonov.hw5.Example.s01object;
 
 
 /**
@@ -114,7 +114,7 @@ public class Phone {
         System.out.println("Телефон " + model + " заряжен");
     }
 
-    public void takePhoto(s01object.Person person) {
+    public void takePhoto(com.pb.leonov.hw5.Example.s01object.Person person) {
         if (isCharged()) {
             System.out.println("Телеофн " + model + " фотографирует " + person.getName());
         }
