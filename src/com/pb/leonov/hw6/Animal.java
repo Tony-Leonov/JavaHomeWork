@@ -1,8 +1,8 @@
 package com.pb.leonov.hw6;
 
-public class Animals {
+public class Animal {
 
-    public Animals(String food, String location) {
+    public Animal (String food, String location) {
         this.food = food;
         this.location = location;
     }
@@ -44,7 +44,8 @@ public class Animals {
         String D = "ест ";
         String E = "спит";
 
-    static class Cat extends Animals {
+    static class Cat extends Animal {
+        String specificity = "Шерсть";
         String A = "Кошка ";
         int hCode = A.hashCode();
 
@@ -54,7 +55,7 @@ public class Animals {
 
         @Override
         public void makeNoise() {
-            System.out.println(A + C + "мяу" + "\nhashCode: " + hCode);
+            System.out.println(A + C + "мяу");
         }
         @Override
         public void eat() {
@@ -66,11 +67,12 @@ public class Animals {
         }
         @Override
         public void location() {
-            System.out.println(A + B + getLocation());
+            System.out.println(A + B + getLocation() + "\nhashCode: " + hCode + "\n");
         }
     }
-    static class Dog extends Animals {
-         String A = "Собака ";
+    static class Dog extends Animal {
+        String specificity = "Острые зубы";
+        String A = "Собака ";
         int hCode = A.hashCode();
 
         public Dog(String food, String location) {
@@ -79,7 +81,7 @@ public class Animals {
 
         @Override
         public void makeNoise() {
-            System.out.println(A + C + "гав" + "\nhashCode: " + hCode);
+            System.out.println(A + C + "гав");
         }
         @Override
         public void eat() {
@@ -91,13 +93,14 @@ public class Animals {
         }
         @Override
         public void location() {
-            System.out.println(A + B + getLocation());
+            System.out.println(A + B + getLocation() + "\nhashCode: " + hCode + "\n");
         }
 
     }
 
 
-    static class Horse extends Animals {
+    static class Horse extends Animal {
+        String specificity = "Копыта";
         String A = "Лошадь ";
         int hCode = A.hashCode();
 
@@ -107,7 +110,7 @@ public class Animals {
 
         @Override
         public void makeNoise() {
-            System.out.println(A + C + "игы-гы" + "\nhashCode: " + hCode);
+            System.out.println(A + C + "игы-гы");
         }
         @Override
         public void eat() {
@@ -119,7 +122,7 @@ public class Animals {
         }
         @Override
         public void location() {
-            System.out.println(A + B +getLocation());
+            System.out.println(A + B +getLocation() + "\nhashCode: " + hCode + "\n");
         }
     }
 }
