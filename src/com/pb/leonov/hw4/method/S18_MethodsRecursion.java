@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 public class S18_MethodsRecursion {
     // Нахождение наибольшего общего делителя (НОД) двух целых чисел

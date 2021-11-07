@@ -1,4 +1,4 @@
-package string;
+package com.pb.leonov.hw4.string;
 
 import java.util.StringTokenizer;
 

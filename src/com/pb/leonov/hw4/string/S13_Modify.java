@@ -1,4 +1,4 @@
-package string;
+package com.pb.leonov.hw4.string;
 
 public class S13_Modify {
     public static void main(String[] args) {

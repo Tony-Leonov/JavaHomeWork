@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 public class S07_Methods {
     // Пример правильного множественного возврата из метода.

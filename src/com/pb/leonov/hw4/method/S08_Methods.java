@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 public class S08_Methods {
     // Пример: Использование сторожевого оператора, для защиты номинального варианта.

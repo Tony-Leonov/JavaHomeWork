@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 public class S16_MethodsRecursion {
     // Рекурсия (сложная рекурсия).

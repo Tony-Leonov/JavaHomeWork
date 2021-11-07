@@ -1,4 +1,4 @@
-package string;
+package com.pb.leonov.hw4.string;
 
 public class S08_Split {
     public static void main(String[] args) {

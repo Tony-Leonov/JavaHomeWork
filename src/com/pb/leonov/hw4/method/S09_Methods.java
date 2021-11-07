@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 import java.util.Scanner;
 

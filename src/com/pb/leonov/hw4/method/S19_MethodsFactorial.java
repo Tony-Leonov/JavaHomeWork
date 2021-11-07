@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 public class S19_MethodsFactorial {
     // Нахождение факториала числа.

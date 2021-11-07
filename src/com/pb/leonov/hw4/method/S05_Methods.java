@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 public class S05_Methods {
     // Сложение двух целых чисел.

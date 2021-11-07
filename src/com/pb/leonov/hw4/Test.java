@@ -1,3 +1,5 @@
+package com.pb.leonov.hw4;
+
 import java.util.Arrays;
 
 public class Test {

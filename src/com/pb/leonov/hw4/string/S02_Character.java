@@ -1,4 +1,4 @@
-package string;
+package com.pb.leonov.hw4.string;
 
 public class S02_Character {
     public static void main(String[] args) {

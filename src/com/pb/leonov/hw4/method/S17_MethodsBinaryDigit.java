@@ -1,4 +1,4 @@
-package method;
+package com.pb.leonov.hw4.method;
 
 public class S17_MethodsBinaryDigit {
     // Вывод в двоичном формате числа, переданного в десятичном формате
