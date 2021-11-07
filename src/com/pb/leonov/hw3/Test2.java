@@ -1,3 +1,5 @@
+package com.pb.leonov.hw3;
+
 import java.util.Arrays;
 
 public class Test2 {

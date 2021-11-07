@@ -1,3 +1,5 @@
+package com.pb.leonov.hw3;
+
 import java.util.Random;
 
 public class Random_number {

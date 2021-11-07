@@ -1,4 +1,4 @@
-package hw3;
+package com.pb.leonov.hw3.hw3_example;
 
 public class RandomTest {
     public static void main(String[] args) {

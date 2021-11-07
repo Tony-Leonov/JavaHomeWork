@@ -1,4 +1,4 @@
-package array;
+package com.pb.leonov.hw3.array;
 
 public class S11_JaggedArray {
     // Зубчатые массивы (Jagged Array).

@@ -1,4 +1,4 @@
-package array;
+package com.pb.leonov.hw3.array;
 
 public class S03_ArraysFill {
     // Массивы (одномерный массив).

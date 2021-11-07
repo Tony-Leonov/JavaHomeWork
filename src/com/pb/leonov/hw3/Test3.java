@@ -1,3 +1,5 @@
+package com.pb.leonov.hw3;
+
 public class Test3 {
     public static void main(String[] args) {
         int x = 10;

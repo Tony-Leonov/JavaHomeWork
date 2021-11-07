@@ -1,4 +1,4 @@
-package array;
+package com.pb.leonov.hw3.array;
 
 public class S08_TwoDimentionalArray {
     // Массивы состоящие из одного элемента.
