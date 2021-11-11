@@ -1,4 +1,4 @@
-package com.pb.leonov.hw_test;
+package com.pb.leonov.hw6.hw_test;
 
 public class Animal {
 

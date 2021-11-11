@@ -1,28 +1,39 @@
 package com.pb.leonov.hw6;
 
-
-import static com.pb.leonov.hw6.Animal.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 
 public class VetСlinic {
-    public static void main(String[] args) {
-        Animal animal1 = new Cat("корм","дом");
-        Animal animal2 = new Dog("мясо","будка");
-        Animal animal3 = new Horse("овёс","конюшня");
+    public static void main(String[] args) throws Exception {
+        Cat cat = new Cat("Васька", "Белый");
+        cat.setFood("Молоко и мясо");
+        cat.setLocation("Дом");
 
-         animal1.makeNoise(); animal1.eat(); animal1.sleep(); animal1.location();
-         animal2.makeNoise(); animal2.eat(); animal2.sleep(); animal2.location();
-         animal3.makeNoise(); animal3.eat(); animal3.sleep(); animal3.location();
+        Cat cat2 = new Cat("Черныш", "Черный");
+        cat2.setFood("Молоко и мыши");
+        cat2.setLocation("Улица");
+
+        Horse horse = new Horse("Барс", "Мустанг");
+        horse.setFood("Овёс");
+        horse.setLocation("Загон");
+
+        Dog dog = new Dog ("Ричи", "Лабрадор");
+        dog.setFood("Корм и мясо");
+        dog.setLocation("Вольер");
 
 
-         String[] all_animal = {"Cat", "Dog", "Horse"};
+        Animal[] animals = new Animal[] {cat, cat2, horse, dog};
 
-            for (int i = 0; i < 3; i++) {
-               System.out.println(all_animal[i]);
-               String animal = all_animal[i];
-               Veterinarian animals = new Veterinarian("");
-               animals.treatAnimal(animal1);
-               System.out.println("----------------");
-            }
+        Class clazz = Class.forName("com.pb.leonov.hw6.Veterinarian");
+        Constructor constr = clazz.getConstructor();
+        Object vet =  constr.newInstance();
+
+        Method treatAnimal = clazz.getMethod("treatAnimal", Animal.class);
+
+        for (Animal animal: animals) {
+
+            treatAnimal.invoke(vet, animal);
+        }
 
     }
 }
