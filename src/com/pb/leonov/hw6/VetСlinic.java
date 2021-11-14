@@ -31,7 +31,6 @@ public class VetСlinic {
         Method treatAnimal = clazz.getMethod("treatAnimal", Animal.class);
 
         for (Animal animal: animals) {
-
             treatAnimal.invoke(vet, animal);
         }
 
