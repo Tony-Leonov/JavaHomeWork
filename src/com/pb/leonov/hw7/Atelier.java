@@ -5,6 +5,7 @@ public class Atelier {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String CURRENCY = " UAH";
 
     public static void main(String[] args) {
 
@@ -26,7 +27,7 @@ public class Atelier {
         for (Clothes clothe : clothes) {
             if (clothe instanceof ManClothes) { //clothe.getEuroSize()
                 System.out.println(clothe.name + ", размер - " + clothe.size   + ", цвет - " + clothe.getColor() + ", цена - "
-                        + clothe.getPrice() + " UAH");
+                        + clothe.getPrice() + CURRENCY);
             }
         }
     }
@@ -36,7 +37,7 @@ public class Atelier {
         for (Clothes clothe : clothes) {
             if (clothe instanceof WomenClothes) { //clothe.getSize()
                 System.out.println(clothe.name + ", размер - " + clothe.size + ", цвет - " + clothe.getColor() + ", цена - "
-                        + clothe.getPrice() + " UAH");
+                        + clothe.getPrice() + CURRENCY);
             }
 
         }
