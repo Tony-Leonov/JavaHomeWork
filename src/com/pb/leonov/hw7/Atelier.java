@@ -2,6 +2,10 @@ package com.pb.leonov.hw7;
 
 
 public class Atelier {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+
     public static void main(String[] args) {
 
         Tshirt tshirt = new Tshirt("156", "красный", "футболка", Size.XS);
@@ -15,22 +19,24 @@ public class Atelier {
 
     }
 
+
+
     static void dressMan(Clothes[] clothes) {
-        System.out.println("Мужская одежда: ");
+        System.out.println(ANSI_BLUE + "Мужская одежда: "+ ANSI_RESET);
         for (Clothes clothe : clothes) {
-            if (clothe instanceof Tshirt) { //clothe.getSize()
-                System.out.println(clothe.name + ", размера - " + "цвет - " + clothe.getColor() + ", цена - "
-                        + clothe.getPrice());
+            if (clothe instanceof ManClothes) { //clothe.getEuroSize()
+                System.out.println(clothe.name + ", размер - " + clothe.size   + ", цвет - " + clothe.getColor() + ", цена - "
+                        + clothe.getPrice() + " UAH");
             }
         }
     }
 
     static void dressWomen(Clothes[] clothes) {
-        System.out.println("Женская одежда: ");
+        System.out.println(ANSI_RED + "\nЖенская одежда: " + ANSI_RESET);
         for (Clothes clothe : clothes) {
-            if (clothe instanceof Skirt) { //clothe.getSize()
-                System.out.println(clothe.name + ", размера - " + "цвет - " + clothe.getColor() + ", цена - "
-                        + clothe.getPrice());
+            if (clothe instanceof WomenClothes) { //clothe.getSize()
+                System.out.println(clothe.name + ", размер - " + clothe.size + ", цвет - " + clothe.getColor() + ", цена - "
+                        + clothe.getPrice() + " UAH");
             }
 
         }
