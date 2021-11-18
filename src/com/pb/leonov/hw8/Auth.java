@@ -6,7 +6,6 @@ public class Auth {
 
     public String login;
     public String password;
-    public String confirmPassword;
 
     public Auth signUp(String login, String password, String confirmPassword) {
 
@@ -16,8 +15,6 @@ public class Auth {
         int length_password = password.length();
 
         System.out.println(Pattern.matches("([a-z-A-Z]*[0-9]*)", login));
-
-
 
 
         if (length_login > 20 && length_login < 5) {
@@ -45,7 +42,6 @@ public class Auth {
         }
 
 
-
         if (!password.equals(confirmPassword)) {
             System.out.println("Пароль не совпадает");
         } else {
@@ -54,24 +50,5 @@ public class Auth {
         return null;
     }
 
-
-
-
-
-    }
-//        if (length_password > 5 && length_password < 20) {
-//            System.out.println("Длина пароля должна быть от 5 до 20 символов");
-//            return;
-//        } else {
-//            this.login = login;
-//        }
-//
-//        if (password == confirmPassword) {
-//            this.confirmPassword = confirmPassword;
-//            System.out.println("Пользователь создан");
-//        } else {
-//            System.out.println("Пароль подтверждения не совпадает с введенным паролем");
-//            return;
-//        }
-
+}
 
