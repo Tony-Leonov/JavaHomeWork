@@ -4,20 +4,19 @@ import java.util.Scanner;
 
 import static com.pb.leonov.hw8.Auth.*;
 
-public class OnlineShop {
-    public static <signUp> void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Регистрация аккаунта\nПридумайте login 5-20 символов: ");
-        String usersLogin = in.next();
-        System.out.print("Придумайте пароль, не менее 5 символов: ");
-        String usersPassword= in.next();
-        System.out.print("Повторный ввод пароля: ");
-        String usersConfirmPassword= in.next();
+public abstract class OnlineShop  {
+    public static void main(String[] args) {
 
+        Auth user = new Auth();
 
-        Auth a = new Auth().signUp(usersLogin, usersPassword, usersConfirmPassword);
+//        try {
+//            user.signUp("","","");
+//            user.signIn()
+//
+//        } catch (WrongLoginException | WrongPasswordException ex) {
+//            System.out.println("Ошибка! " + ex.getMessage());
+//        }
 
-//        signUp(usersLogin, usersPassword, usersConfirmPassword);
 
     }
 }
