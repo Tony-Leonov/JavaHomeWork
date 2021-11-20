@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Test {
 
-    public static void main(String[] args) {
-        //deposit(56);
+    public static void main(String[] args) throws ConnectException {
+        deposit(56);
     }
 
     public static void deposit(double amount) throws ConnectException {
