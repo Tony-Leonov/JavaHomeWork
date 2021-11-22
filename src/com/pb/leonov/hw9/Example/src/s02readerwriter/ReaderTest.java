@@ -9,7 +9,7 @@ public class ReaderTest {
         char[] array = new char[100];
 
         // Creates a reader using the FileReader
-        try (Reader reader = new FileReader("files/s02-reader.txt")) {
+        try (Reader reader = new FileReader("src\\com\\pb\\leonov\\hw9\\Example\\files\\s02-reader.txt")) {
 
             // Checks if reader is ready
             System.out.println("Is there data in the stream?  " + reader.ready());

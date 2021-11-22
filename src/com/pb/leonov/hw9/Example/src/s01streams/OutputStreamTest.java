@@ -5,7 +5,7 @@ import java.io.OutputStream;
 
 public class OutputStreamTest {
     public static void main(String[] args) throws Exception {
-        OutputStream os = new FileOutputStream("text.txt");
+        OutputStream os = new FileOutputStream("src\\com\\pb\\leonov\\hw9\\Example\\files\\text.txt");
 
         int b = 37;
         os.write(b); // записывает в выходной поток один байт, который представлен целочисленным параметром b

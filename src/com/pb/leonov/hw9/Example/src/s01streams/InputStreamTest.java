@@ -5,7 +5,7 @@ import java.io.InputStream;
 
 public class InputStreamTest {
     public static void main(String[] args) throws Exception {
-        InputStream is = new FileInputStream("file.txt");
+        InputStream is = new FileInputStream("src\\com\\pb\\leonov\\hw9\\Example\\file.txt");
         int bytes = is.available(); // возвращает количество байтов, доступных для чтения в потоке
         int oneByte = is.read();    // возвращает целочисленное представление следующего байта в потоке.
                                     // Когда в потоке не останется доступных для чтения байтов, данный метод возвратит число -1

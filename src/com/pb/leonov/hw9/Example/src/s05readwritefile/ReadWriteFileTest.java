@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 public class ReadWriteFileTest {
     public static void main(String[] args) {
 
-        Path path = Paths.get("files/s05-data.txt");
+        Path path = Paths.get("src\\com\\pb\\leonov\\hw9\\Example\\files\\s05-data.txt");
 
         // write to file
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {

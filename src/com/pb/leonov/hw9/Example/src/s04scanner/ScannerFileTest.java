@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class ScannerFileTest {
     public static void main(String[] args) {
-        Path path = Paths.get("files/s01-input-text.txt");
+        Path path = Paths.get("src\\com\\pb\\leonov\\hw9\\Example\\files\\s01-input-text.txt");
 
         try (Scanner scan = new Scanner(path)) {
 

@@ -8,7 +8,7 @@ public class OutputStreamTest2 {
         String data = "This is a line of text inside the file.";
         OutputStream os = null;
         try {
-            os = new FileOutputStream("files/s01-output-text.txt");
+            os = new FileOutputStream("src\\com\\pb\\leonov\\hw9\\Example\\files\\s01-output-text.txt");
 
             // Converts the string into bytes
             byte[] dataBytes = data.getBytes();

@@ -6,7 +6,7 @@ import java.io.InputStream;
 public class InputStreamTest2 {
     public static void main(String[] args) {
 
-        try (InputStream is = new FileInputStream("files/s01-input-text.txt")) {
+        try (InputStream is = new FileInputStream("src\\com\\pb\\leonov\\hw9\\Example\\files\\s01-input-text.txt")) {
 
             int available = is.available();
             byte[] buffer = new byte[available];

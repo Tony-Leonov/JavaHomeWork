@@ -8,7 +8,7 @@ public class WriterTest {
         String data = "This is the data in the output file123123";
 
         // Creates a Writer using FileWriter
-        try (Writer writer = new FileWriter("files/s01-writer.txt")) {
+        try (Writer writer = new FileWriter("src\\com\\pb\\leonov\\hw9\\Example\\files\\s01-writer.txt")) {
 
             // Writes string to the file
             writer.write(data);
