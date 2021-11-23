@@ -1,7 +1,5 @@
 package com.pb.leonov.hw9;
 
-import com.pb.leonov.hw7.Clothes;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,24 +17,19 @@ public class FileNumbers {
     }
 
     public static void createNumbersFile() {
-        int[] array;
-        array = new int[101];
-        for (int i = 0; i < array.length; i++) {
-            Random random = new Random();
-            array[i] = random.nextInt(99) +1;
-            System.out.print(array[i] + " ");
-
-//            if (i == 9 || i == 19 || i == 29 || i == 39 || i == 49 || i == 59 || i == 69 || i == 79 || i == 89) {
-//
-//            }
-
-        }
 
         // Creates a Writer using FileWriter
         try (Writer writer = new FileWriter("src\\com\\pb\\leonov\\hw9\\test_write1.txt")) {
 
-            // Writes string to the file
-            writer.write(Arrays.toString(array));
+            int[][] array = new int[10][10];
+            for (int i = 0; i < array.length; i++) {
+                for(int j = 0; j < array.length; j++) {
+                    Random random = new Random();
+                    array[i][j] = random.nextInt(99) +1;
+                    System.out.print(array[i][j] + " ");
+                    writer.write(array[i][j] + " ");
+                }
+            }
 
         } catch (Exception e) {
             e.getStackTrace();
