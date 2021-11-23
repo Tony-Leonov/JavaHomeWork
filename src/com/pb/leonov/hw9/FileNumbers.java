@@ -22,6 +22,7 @@ public class FileNumbers {
         try (Writer writer = new FileWriter("src\\com\\pb\\leonov\\hw9\\test_write1.txt")) {
 
             int[][] array = new int[10][10];
+
             for (int i = 0; i < array.length; i++) {
                 for(int j = 0; j < array.length; j++) {
                     Random random = new Random();
@@ -29,6 +30,7 @@ public class FileNumbers {
                     System.out.print(array[i][j] + " ");
                     writer.write(array[i][j] + " ");
                 }
+                    writer.write("\n");
             }
 
         } catch (Exception e) {
