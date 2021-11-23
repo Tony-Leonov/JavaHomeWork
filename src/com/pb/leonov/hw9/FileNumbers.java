@@ -23,11 +23,11 @@ public class FileNumbers {
 
             int[][] array = new int[10][10];
 
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i < array.length; i++, System.out.println()) {
                 for(int j = 0; j < array.length; j++) {
                     Random random = new Random();
                     array[i][j] = random.nextInt(99) +1;
-                    System.out.print(array[i][j] + " ");
+                   System.out.print(array[i][j] + " ");
                     writer.write(array[i][j] + " ");
                 }
                     writer.write("\n");
