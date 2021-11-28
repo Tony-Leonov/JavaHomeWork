@@ -20,6 +20,6 @@ public class NumBox <T>  {
 
 
     void add(int i, T number) {  //добавляющий число в массив. В случае если массив полон - выбросить исключение.
-        add(arr[i][(T) number]);
+        add(arr[i][number]);
     }
 }
