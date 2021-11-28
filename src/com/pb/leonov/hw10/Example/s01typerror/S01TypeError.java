@@ -1,4 +1,4 @@
-package s01typerror;
+package com.pb.leonov.hw10.Example.s01typerror;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package s04extends;
+package com.pb.leonov.hw10.Example.s04extends;
 
 public class Main {
     public static void main(String[] args) {

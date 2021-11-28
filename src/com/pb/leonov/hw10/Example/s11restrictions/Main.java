@@ -1,4 +1,4 @@
-package s11restrictions;
+package com.pb.leonov.hw10.Example.s11restrictions;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package s06arrays;
+package com.pb.leonov.hw10.Example.s06arrays;
 
-import s02nogenerics.Vehicle;
+import com.pb.leonov.hw10.Example.s02nogenerics.Vehicle;
 
 public class FixedSizedGarage<T extends Vehicle> {
 

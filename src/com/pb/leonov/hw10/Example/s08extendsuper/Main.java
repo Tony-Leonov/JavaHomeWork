@@ -1,8 +1,8 @@
-package s08extendsuper;
+package com.pb.leonov.hw10.Example.s08extendsuper;
 
-import s02nogenerics.Car;
-import s02nogenerics.Vehicle;
-import s05manyparam.Truck;
+import com.pb.leonov.hw10.Example.s02nogenerics.Car;
+import com.pb.leonov.hw10.Example.s02nogenerics.Vehicle;
+import com.pb.leonov.hw10.Example.s05manyparam.Truck;
 
 import java.util.ArrayList;
 import java.util.List;

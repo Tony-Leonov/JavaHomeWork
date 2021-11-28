@@ -1,6 +1,6 @@
-package s05manyparam;
+package com.pb.leonov.hw10.Example.s05manyparam;
 
-import s02nogenerics.Car;
+import com.pb.leonov.hw10.Example.s02nogenerics.Car;
 
 public class Truck extends Car {
 

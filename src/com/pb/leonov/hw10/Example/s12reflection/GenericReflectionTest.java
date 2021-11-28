@@ -1,4 +1,4 @@
-package s12reflection;
+package com.pb.leonov.hw10.Example.s12reflection;
 
 import java.lang.reflect.*;
 import java.util.Arrays;

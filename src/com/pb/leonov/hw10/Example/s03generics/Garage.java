@@ -1,4 +1,4 @@
-package s03generics;
+package com.pb.leonov.hw10.Example.s03generics;
 
 public class Garage<T> {
 

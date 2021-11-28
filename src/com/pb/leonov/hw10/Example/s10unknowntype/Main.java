@@ -1,4 +1,4 @@
-package s10unknowntype;
+package com.pb.leonov.hw10.Example.s10unknowntype;
 
 import java.util.ArrayList;
 import java.util.Arrays;

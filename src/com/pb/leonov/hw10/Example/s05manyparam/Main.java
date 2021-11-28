@@ -1,7 +1,7 @@
-package s05manyparam;
+package com.pb.leonov.hw10.Example.s05manyparam;
 
-import s02nogenerics.Car;
-import s02nogenerics.Motorcycle;
+import com.pb.leonov.hw10.Example.s02nogenerics.Car;
+import com.pb.leonov.hw10.Example.s02nogenerics.Motorcycle;
 
 public class Main {
     public static void main(String[] args) {

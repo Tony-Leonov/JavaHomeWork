@@ -1,6 +1,6 @@
-package s08extendsuper;
+package com.pb.leonov.hw10.Example.s08extendsuper;
 
-import s02nogenerics.Vehicle;
+import com.pb.leonov.hw10.Example.s02nogenerics.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;

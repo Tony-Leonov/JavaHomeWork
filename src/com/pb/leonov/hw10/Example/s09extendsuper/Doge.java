@@ -1,4 +1,4 @@
-package s09extendsuper;
+package com.pb.leonov.hw10.Example.s09extendsuper;
 
 public class Doge extends Pet {
 

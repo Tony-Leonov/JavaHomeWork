@@ -1,8 +1,8 @@
-package s07list;
+package com.pb.leonov.hw10.Example.s07list;
 
-import s02nogenerics.Car;
-import s02nogenerics.Motorcycle;
-import s05manyparam.Truck;
+import com.pb.leonov.hw10.Example.s02nogenerics.Car;
+import com.pb.leonov.hw10.Example.s02nogenerics.Motorcycle;
+import com.pb.leonov.hw10.Example.s05manyparam.Truck;
 
 import java.util.ArrayList;
 import java.util.List;

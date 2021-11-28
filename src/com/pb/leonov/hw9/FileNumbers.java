@@ -16,10 +16,10 @@ public class FileNumbers {
         try (Writer writer = new FileWriter("src\\com\\pb\\leonov\\hw9\\numbers.txt")) {
 
             int[][] array = new int[10][10];
+            Random random = new Random();
 
             for (int i = 0; i < array.length; i++, System.out.println()) {
                 for(int j = 0; j < array.length; j++) {
-                    Random random = new Random();
                     array[i][j] = random.nextInt(99) +1;
                    System.out.print(array[i][j] + " ");
                     writer.write(array[i][j] + " ");
