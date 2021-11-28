@@ -28,8 +28,8 @@ public class NumBox <T>  {
     }
 
 
-    public void add(T num) {
-        add(T num);
+    public void add(T[] num) {
+        add(T num)
     }
 
 
