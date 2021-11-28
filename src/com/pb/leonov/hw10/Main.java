@@ -7,7 +7,7 @@ public class Main {
         //C использованием дженериков
         NumBox<Float> floatNumBox  = new NumBox<>(5);
 
-        floatNumBox.add(0,32);         System.out.println();
+        floatNumBox.add(0,2.2F);         System.out.println();
 
 
 

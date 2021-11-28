@@ -2,7 +2,7 @@ package com.pb.leonov.hw10;
 
 public class NumBox <T>  {
 
-    private T[] arr;
+    public T[][] arr;
     int size;
 
     public NumBox(int size) {
@@ -19,9 +19,7 @@ public class NumBox <T>  {
     }
 
 
-    void add(T num) {
-        arr.add(t);
-    }//добавляющий число в массив. В случае если массив полон - выбросить исключение.
-
-
+    void add(int i, T number) {  //добавляющий число в массив. В случае если массив полон - выбросить исключение.
+        add(arr[i][(T) number]);
+    }
 }
