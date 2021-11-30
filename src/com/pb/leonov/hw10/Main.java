@@ -1,6 +1,5 @@
 package com.pb.leonov.hw10;
 
-
 public class Main {
     public static void main(String[] args) {
         //протестировать полученный класс на примере NumBox<Float> и NumBox<Integer>.
