@@ -1,29 +1,22 @@
-package com.pb.leonov.hw10;
+package com.pb.leonov.hw11.Example.src.hw10;
 
-import com.pb.leonov.hw11.Example.src.hw10.NumBoxIsEmptyException;
-import com.pb.leonov.hw11.Example.src.hw10.NumBoxIsFullException;
+public class NumBox<T extends Number> {
 
-public class NumBox <T extends Number>  {
-
-    private final T[] num;
+    private final T[] numbers;
     private int size = 0;
 
-    public int getSize() {
-        return size;
-    }
-
-    public NumBox(int size) {
-        if (size <= 0) {
-            throw new IllegalArgumentException("Param size must be > 0");
+    public NumBox(int maxSize) {
+        if (maxSize <= 0) {
+            throw new IllegalArgumentException("Param maxSize must be > 0");
         }
-        num = (T[]) new Number[size];
+        numbers = (T[]) new Number[maxSize];
     }
 
     public void add(T num) {
-        if (size >= this.num.length) {
+        if (size >= numbers.length) {
             throw new NumBoxIsFullException("Current size is " + size);
         }
-        this.num[size] = num;
+        numbers[size] = num;
         size++;
     }
 
@@ -31,7 +24,7 @@ public class NumBox <T extends Number>  {
         if (index >= size) {
             return null;
         }
-        return num[index];
+        return numbers[index];
     }
 
     public int length() {
@@ -44,7 +37,7 @@ public class NumBox <T extends Number>  {
         }
         double sum = 0;
         for (int i = 0; i < size; i++) {
-            sum += num[i].doubleValue();
+            sum += numbers[i].doubleValue();
         }
         return sum;
     }
@@ -57,14 +50,14 @@ public class NumBox <T extends Number>  {
         if (size < 1) {
             throw new NumBoxIsEmptyException("NumBox is empty");
         }
-        double max = num[0].doubleValue();
+        double max = numbers[0].doubleValue();
         int maxIndex = 0;
         for(int i = 1; i < size; i++) {
-            if (num[i].doubleValue() > max) {
-                max = num[i].doubleValue();
+            if (numbers[i].doubleValue() > max) {
+                max = numbers[i].doubleValue();
                 maxIndex = i;
             }
         }
-        return num[maxIndex];
+        return numbers[maxIndex];
     }
 }
