@@ -15,7 +15,7 @@ public class Main {
         garage2.set(new Motorcycle("Honda CBR500R"));
         // ошибка компиляции
         // Motorcycle motorcycle = garage.get();
-        // System.out.println(motorcycle.getName());
+        // System.out.println(motorcycle.getFullName());
 
         //Но в гараж можно положить что угодно
         Garage<String> garage3 = new Garage<>();

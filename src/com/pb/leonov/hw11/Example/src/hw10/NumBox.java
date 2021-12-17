@@ -1,5 +1,8 @@
 package com.pb.leonov.hw11.Example.src.hw10;
 
+import com.pb.leonov.hw10.NumBoxIsEmptyException;
+import com.pb.leonov.hw10.NumBoxIsFullException;
+
 public class NumBox<T extends Number> {
 
     private final T[] numbers;

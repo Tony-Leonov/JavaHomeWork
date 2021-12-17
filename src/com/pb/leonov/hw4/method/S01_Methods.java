@@ -12,7 +12,7 @@ public class S01_Methods {
 
     public static void main(String[] args) {
 
-        // В теле метода Main на 17-й строке, вызываем метод procedure.
+        // В теле метода PhoneBook на 17-й строке, вызываем метод procedure.
 
         procedure();
     }

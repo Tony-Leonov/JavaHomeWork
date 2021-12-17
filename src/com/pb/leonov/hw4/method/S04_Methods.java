@@ -13,7 +13,7 @@ public class S04_Methods {
 
     public static void main(String[] args) {
 
-        // В теле метода Main на 19-й строке, создаем строковую локальную переменную с именем sentence,
+        // В теле метода PhoneBook на 19-й строке, создаем строковую локальную переменную с именем sentence,
         // присваиваем ей возвращаемое значение метода function, которому в качестве аргумента передаем строку - World.
 
         String sentence = function("World");

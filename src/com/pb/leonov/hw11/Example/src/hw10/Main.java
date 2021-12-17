@@ -1,5 +1,7 @@
 package com.pb.leonov.hw11.Example.src.hw10;
 
+import com.pb.leonov.hw10.NumBox;
+
 public class Main {
     public static void main(String[] args) {
         NumBox<Float> floatBox = new NumBox<>(5);

@@ -3,7 +3,7 @@ package com.pb.leonov.hw6.Example.s01inheritance;
 public class Main {
     public static void main(String[] args) {
         Computer comp = new Computer("Asus");
-        //comp.setName("Asus");
+        //comp.setFullName("Asus");
         comp.on();
         //comp.charge()
 

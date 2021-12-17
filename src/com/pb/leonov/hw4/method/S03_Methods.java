@@ -9,7 +9,7 @@ public class S03_Methods {
 
     public static void main(String[] args) {
 
-        // В теле метода Main на 15-й строке, создаем строковую локальную переменную с именем string
+        // В теле метода PhoneBook на 15-й строке, создаем строковую локальную переменную с именем string
         // и присваиваем ей возвращаемое значение метода function.
 
         //String string = function();
