@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 
 import static com.pb.leonov.hw11.CreateFile.createFile;
+import static com.pb.leonov.hw11.Sort.Sorting;
+
 
 public class PhoneBook {
     public static void main(String[] args) throws IOException {
@@ -17,7 +19,7 @@ public class PhoneBook {
                 "\n 1 - Создание контакта" +
                 "\n 2 - Удаление контакта" +
                 "\n 3 - Поиск контакта (по ФИО)" +
-                "\n 4 - Вывести все записи с сортировкой (по ФИО либо по номеру телефона)" +
+                "\n 4 - Вывести все записи с сортировкой (по дате рождения или ФИО)" +
                 "\n 5 - Редактирование контакта" +
                 "\n 6 - Записать в файл все данные телефонной книги" +
                 "\n 7 - Загрузка из файла всех данных" +
@@ -41,7 +43,7 @@ public class PhoneBook {
                 Contact.findContact();
                 break;
             case 4:
-                Contact.ShowAll();
+                Sorting();
                 break;
             case 5:
                 Contact.setContact();
