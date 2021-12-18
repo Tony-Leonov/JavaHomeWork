@@ -220,35 +220,26 @@ class Contact {
     }
 
     public static void setContact() {
-
         System.out.println("Для редактирования контакта, укажите полное ФИО: ");
 
-                Scanner input1 = new Scanner(System.in);
-                System.out.print("Укажите полное ФИО для поиска: ");
-                String input_FullName = input1.nextLine();
+        Scanner input1 = new Scanner(System.in);
+        System.out.print("Укажите полное ФИО для поиска: ");
+        String input_FullName = input1.nextLine();
 
-                for (int i = 0; i < persons.size(); i++) {
-                    String full = persons.get(i).getFullName();
-                    if (Objects.equals(full, input_FullName)) {
-                        //System.out.println();
-                        System.out.print("Контакт найден. Укажите новый номер телефона: ");
-                        Scanner input3 = new Scanner(System.in);
+        for (int i = 0; i < persons.size(); i++) {
+            String full = persons.get(i).getFullName();
+            if (Objects.equals(full, input_FullName)) {
+                //System.out.println();
+                System.out.print("Контакт найден. Укажите новый номер телефона: ");
+                Scanner input3 = new Scanner(System.in);
 
-                                String new_phone = input3.nextLine();
-                                setPhone(new_phone);
-                                System.out.print("Телефон успешно изменен на" + new_phone + "\n" + persons.get(i));
-
-                    }
-                }
-
+                String new_phone = input3.nextLine();
+                setPhone(new_phone);
+                System.out.print("Телефон успешно изменен на" + new_phone + "\n" + persons.get(i));
+            }
         }
-
-
-    } // end
-
+    }
 
 
 
-
-
-
+    }
