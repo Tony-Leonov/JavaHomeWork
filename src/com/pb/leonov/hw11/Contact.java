@@ -110,7 +110,29 @@ class Contact {
         module.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer());
         mapper.registerModule(module_2);
 
+
+
         persons.add(new Contact("Тестовый", "380637654321", LocalDate.of(1996, 1, 20), "Заводская 7"));
+
+
+        Scanner input1 = new Scanner(System.in);
+        System.out.print("Укажите полное ФИО для поиска: ");
+        String input_FullName = input1.nextLine();
+
+        Scanner input2 = new Scanner(System.in);
+        System.out.print("Укажите номер телефона: ");
+        String input_phone = input2.nextLine();
+
+        Scanner input3 = new Scanner(System.in);
+        System.out.print("Укажите дату рождения, формат (YYYY-MM-DD): ");
+        LocalDate input_dateOfBirth = LocalDate.parse(input3.nextLine());
+
+        Scanner input4 = new Scanner(System.in);
+        System.out.print("Укажите адрес: ");
+        String input_address = input4.nextLine();
+
+        persons.add(new Contact(input_FullName, input_phone, input_dateOfBirth , input_address ));
+
 
 //        String personsJson = mapper.writeValueAsString(persons);
 //        System.out.println(personsJson);
@@ -118,7 +140,7 @@ class Contact {
     }
 
 
-    public static <T> void ShowAll() throws IOException {
+    public static void ShowAll() throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
         // pretty printing (json с отступами)
@@ -147,7 +169,6 @@ class Contact {
         System.out.println(personsJson);
 
         System.out.println("Количество записей в телефонной книге: " + persons.size());
-
 
 
         //Collections.sort(Collections.unmodifiableList(persons));
