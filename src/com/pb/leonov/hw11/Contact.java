@@ -21,7 +21,7 @@ class Contact {
 
     static ArrayList<Contact> persons = new ArrayList<>(Arrays.asList(
             new Contact("Джекин Альфред Рудольфович", "380737654333", LocalDate.of(2000, 5, 2), "Гетьмана Петра Дорошенка 5"),
-            new Contact("Гнат Василий Иванович ", "380502168789", LocalDate.of(1990, 4, 12), "Петровское 5"),
+            new Contact("Шереметьев Василий Иванович ", "380502168789", LocalDate.of(1990, 4, 12), "Петровское 5"),
             new Contact("Аксенова Елена Витальевна", "380637654321", LocalDate.of(1996, 1, 20), "Заводская 7"),
             new Contact("Леонов Антон Витальевич", "380737654333", LocalDate.of(1994, 5, 10), "Дорошенка 12")
     ));
@@ -110,7 +110,7 @@ class Contact {
         module.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer());
         mapper.registerModule(module_2);
 
-        persons.add(new Contact("Тестовый дядька", "380637654321", LocalDate.of(1996, 1, 20), "Заводская 7"));
+        persons.add(new Contact("Тестовый", "380637654321", LocalDate.of(1996, 1, 20), "Заводская 7"));
 
 //        String personsJson = mapper.writeValueAsString(persons);
 //        System.out.println(personsJson);
@@ -118,7 +118,7 @@ class Contact {
     }
 
 
-    public static void ShowAll() throws IOException {
+    public static <T> void ShowAll() throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
         // pretty printing (json с отступами)
@@ -147,6 +147,8 @@ class Contact {
         System.out.println(personsJson);
 
         System.out.println("Количество записей в телефонной книге: " + persons.size());
+
+
 
         //Collections.sort(Collections.unmodifiableList(persons));
         //Collections.sort(Collections.unmodifiableList(persons.fullName));
@@ -233,9 +235,8 @@ class Contact {
                 System.out.print("Контакт найден. Укажите новый номер телефона: ");
                 Scanner input3 = new Scanner(System.in);
 
-                String new_phone = input3.nextLine();
-                setPhone(new_phone);
-                System.out.print("Телефон успешно изменен на" + new_phone + "\n" + persons.get(i));
+                setPhone(input3.nextLine());
+                System.out.print("Телефон успешно изменен на" + input3.nextLine() + "\n" + persons.get(i));
             }
         }
     }
