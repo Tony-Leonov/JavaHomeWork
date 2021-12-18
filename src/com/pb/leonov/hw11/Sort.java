@@ -25,7 +25,7 @@ public class Sort {
 
         switch (input) {
             case 1:
-                Contact.persons.sort(Comparator.comparing(Contact::getFullName)); // Сортировка по Дате рождения
+                Contact.persons.sort(Comparator.comparing(Contact::getFullName)); // Сортировка по ФИО
                 break;
             case 2:
                 Contact.persons.sort(Comparator.comparing(Contact::getDateOfBirth)); // Сортировка по Дате рождения
