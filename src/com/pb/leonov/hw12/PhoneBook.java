@@ -41,7 +41,7 @@ public class PhoneBook {
                 new Sorting();
                 break;
             case 5:
-                new setContact2();
+                new setContact();
                 break;
             case 6:
                 createFile();
