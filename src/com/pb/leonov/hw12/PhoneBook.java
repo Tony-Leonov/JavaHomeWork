@@ -1,13 +1,9 @@
-package com.pb.leonov.hw11;
+package com.pb.leonov.hw12;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-
-import static com.pb.leonov.hw11.Contact.*;
-import static com.pb.leonov.hw11.CreateFile.createFile;
-import static com.pb.leonov.hw11.Sort.Sorting;
-
+import static com.pb.leonov.hw12.CreateFile.createFile;
 
 public class PhoneBook {
     public static void main(String[] args) throws IOException {
@@ -33,21 +29,19 @@ public class PhoneBook {
 
         switch (input) {
             case 1:
-//                Contact contact = new Contact();
-//                contact.Contact();
                 Contact.main();
                 break;
             case 2:
-                deleteContact();
+                new deleteContact();
                 break;
             case 3:
-                findContact();
+                new findContact();
                 break;
             case 4:
-                Sorting();
+                new Sorting();
                 break;
             case 5:
-                setContact();
+                new setContact2();
                 break;
             case 6:
                 createFile();
@@ -56,10 +50,11 @@ public class PhoneBook {
                 break;
             case 8:
                 i = false;
+                System.out.println("Программа завершена");
                 break;
             default:
                 i = false;
-                System.out.println("Ошибка! Программа заверешна");
+                System.out.println("Ошибка! Программа завершена");
             }
         }
     }

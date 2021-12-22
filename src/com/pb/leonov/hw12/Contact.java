@@ -1,19 +1,18 @@
-package com.pb.leonov.hw11;
+package com.pb.leonov.hw12;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
 
-class Contact {
+public class Contact {
 
     private String fullName;
-    public static String phone;
+    private String phone;
     private LocalDate dateOfBirth;
     private String address;
     private LocalDateTime modify;
@@ -25,7 +24,6 @@ class Contact {
         this.address = address;
         this.modify = LocalDateTime.now();
     }
-
 
     static ArrayList<Contact> persons = new ArrayList<>(Arrays.asList(
             new Contact("Джекин Альфред Рудольфович", "380737654333", LocalDate.of(2003, 5, 2), "Гетьмана Петра Дорошенка 5"),
@@ -57,16 +55,13 @@ class Contact {
         return modify;
     }
 
-    public void setModify(LocalDateTime modify) {
-        this.modify = modify;
-    }
-
     public String getPhone() {
         return phone;
     }
 
-    public static void setPhone(String phone) {
-        Contact.phone = phone;
+    public void setPhone(String phone) {
+        this.phone = phone;
+        this.modify = LocalDateTime.now();
     }
 
     public LocalDate getDateOfBirth() {
@@ -135,85 +130,8 @@ class Contact {
 
         persons.add(new Contact(input_FullName, input_phone, input_dateOfBirth, input_address));
 
-
 //        String personsJson = mapper.writeValueAsString(persons);
 //        System.out.println(personsJson);
 
-    }
-
-    public static void deleteContact() {
-        Scanner input1 = new Scanner(System.in);
-        System.out.print("Введите полное ФИО контакта, которое хотите удалить: ");
-        String del = input1.nextLine();
-
-        Iterator<Contact> personsIterator = persons.iterator();//создаем итератор
-        while (personsIterator.hasNext()) {//до тех пор, пока в списке есть элементы
-
-            Contact nextPers = personsIterator.next();//получаем следующий элемент
-            if (nextPers.fullName.equals(del)) {
-                personsIterator.remove();//удаляем кота с нужным именем
-                System.out.println("\u001B[31mКонтакт успешно удален - " + del + "\u001B[0m");
-            }
-        }
-    }
-
-
-    public static void findContact() throws JsonProcessingException {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Укажите полное ФИО для поиска контакта: ");
-        String input_FullName = input.nextLine();
-
-        for (int i = 0; i < persons.size(); i++) {
-            String full = persons.get(i).getFullName();
-            if (Objects.equals(full, input_FullName)) {
-                //System.out.println();
-
-                ObjectMapper mapper = new ObjectMapper();
-                // pretty printing (json с отступами)
-                mapper.enable(SerializationFeature.INDENT_OUTPUT);
-
-                // для работы с полями типа LocalDate
-                SimpleModule module = new SimpleModule();
-                module.addSerializer(LocalDate.class, new LocalDateSerializer());
-                module.addDeserializer(LocalDate.class, new LocalDateDeserializer());
-                mapper.registerModule(module);
-
-                /////для работы с полями типа LocalDateTimeSerializer
-
-                ObjectMapper mapper_2 = new ObjectMapper();
-                // pretty printing (json с отступами)
-                mapper.enable(SerializationFeature.INDENT_OUTPUT);
-
-                // для работы с полями типа LocalDateTime
-                SimpleModule module_2 = new SimpleModule();
-                module.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer());
-                module.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer());
-                mapper.registerModule(module_2);
-
-                //Вывод в JSON
-                String personsJson = mapper.writeValueAsString(persons.get(i));
-                System.out.println(personsJson);
-            }
-        }
-    }
-
-    public static void setContact()  {
-        System.out.println("Для редактирования контакта, укажите полное ФИО: ");
-
-        Scanner input1 = new Scanner(System.in);
-        System.out.print("Укажите полное ФИО для поиска: ");
-        String input_FullName = input1.nextLine();
-
-        for (int i = 0; i < persons.size(); i++) {
-            String full = persons.get(i).getFullName();
-            if (Objects.equals(full, input_FullName)) {
-                //System.out.println();
-                System.out.print("Контакт найден. Укажите новый номер телефона: ");
-                Scanner input3 = new Scanner(System.in);
-
-                setPhone(input3.nextLine());
-                System.out.print("Телефон успешно изменен на" + input3.nextLine() + "\n" + persons.get(i));
-            }
-        }
     }
 }
