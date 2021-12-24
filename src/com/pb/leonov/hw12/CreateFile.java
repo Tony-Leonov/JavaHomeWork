@@ -20,7 +20,7 @@ public class CreateFile {
 
     public static void createFile()  {
         // Creates a Writer using FileWriter
-        try (Writer writer = new FileWriter("src\\com\\pb\\leonov\\hw11\\PhoneBook_storage.txt")) {
+        try (Writer writer = new FileWriter("src\\com\\pb\\leonov\\hw12\\PhoneBook_storage.json")) {
 
             ObjectMapper mapper = new ObjectMapper();
             // pretty printing (json с отступами)

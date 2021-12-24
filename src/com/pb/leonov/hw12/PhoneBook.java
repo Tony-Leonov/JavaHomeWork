@@ -47,6 +47,7 @@ public class PhoneBook {
                 createFile();
                 break;
             case 7:
+                new readFile();
                 break;
             case 8:
                 i = false;
