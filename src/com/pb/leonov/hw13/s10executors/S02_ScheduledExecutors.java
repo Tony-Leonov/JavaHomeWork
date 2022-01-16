@@ -1,4 +1,4 @@
-package com.pb.leonov.hw13.s08executors;
+package com.pb.leonov.hw13.s10executors;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

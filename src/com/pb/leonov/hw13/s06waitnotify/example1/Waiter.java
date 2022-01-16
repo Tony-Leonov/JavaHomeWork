@@ -1,8 +1,8 @@
-package com.pb.leonov.hw13.s06waitnotify;
+package com.pb.leonov.hw13.s06waitnotify.example1;
 
 public class Waiter implements Runnable {
 
-    private Message msg;
+    private final Message msg;
 
     public Waiter(Message m) {
         this.msg = m;
