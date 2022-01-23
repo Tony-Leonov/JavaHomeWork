@@ -35,7 +35,6 @@ public class ChatWindowController {
                 "\nВведите сообщение: ");
         Socket server = new Socket(serverIp, serverPort);
 
-             
         BufferedReader inServer = new BufferedReader(new InputStreamReader(server.getInputStream()));
         PrintWriter outServer = new PrintWriter(server.getOutputStream(), true);
         BufferedReader in = new BufferedReader(new InputStreamReader(server.getInputStream()));
