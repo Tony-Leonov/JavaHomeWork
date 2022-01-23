@@ -50,7 +50,7 @@ public class ChatWindowController {
 
 
                 dataFromServer = inServer.readLine();
-                textArea.setText(dataFromServer + "\n"+ textField.getText());
+                textArea.setText(outServer + "\n"+ textField.getText());
                 //textArea.setText(textArea.getText() + "\n" + textField.getText());
                 textField.clear();
             } catch (Exception e) {
@@ -59,19 +59,4 @@ public class ChatWindowController {
         }
     }
 
-
-
-//        sendMessageButton.setOnAction(event -> {
-//            try {
-//                String dataFromUser, dataFromServer;
-//                dataFromUser = clientMessageButton.TextField();
-//                out.println(dataFromUser);
-//
-//                dataFromServer = in.readLine();
-//                server_field.appentText(dataFromServer);
-//                textField.clear();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
 
