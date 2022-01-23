@@ -42,7 +42,6 @@ public class ChatWindowController {
         PrintWriter outServer = new PrintWriter(server.getOutputStream(), true);
         BufferedReader inConsole = new BufferedReader(new InputStreamReader(System.in));
 
-       //textField.setOnAction(event -> {
             try {
                 String dataFromUser, dataFromServer;
                 dataFromUser = textField.getText();
@@ -50,8 +49,8 @@ public class ChatWindowController {
 
                 dataFromServer = inServer.readLine();
                 System.out.println(dataFromServer);
-                //textArea.setText(outServer + "\n"+ textField.getText());
-                //textArea.setText(textArea.getText() + "\n" + textField.getText());
+                textArea.setText(dataFromServer);
+
                 textField.clear();
 
             } catch (Exception e) {
