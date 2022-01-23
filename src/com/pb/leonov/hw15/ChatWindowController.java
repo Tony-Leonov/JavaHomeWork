@@ -23,19 +23,15 @@ public class ChatWindowController {
 
     @FXML
     void handleSubmitButtonAction() throws IOException {
-       // textArea.setText(textArea.getText() + "\n" + textField.getText());
-       // textField.clear();
 
         out.println("Клиент стартовал");
         String serverIp = "127.0.0.1";
         int serverPort = 1234;
         out.println("Соединяемся с сервером " + serverIp + ":" + serverPort);
-        out.print("Соединение успешно." +
-                "\nДля выхода из диалога, введите exit" +
-                "\nВведите сообщение: ");
+
         Socket server = new Socket(serverIp, serverPort);
 
-        BufferedReader inServer = new BufferedReader(new InputStreamReader(server.getInputStream()));
+        //BufferedReader inServer = new BufferedReader(new InputStreamReader(server.getInputStream()));
         PrintWriter outServer = new PrintWriter(server.getOutputStream(), true);
         BufferedReader in = new BufferedReader(new InputStreamReader(server.getInputStream()));
 
@@ -46,7 +42,7 @@ public class ChatWindowController {
 
                 dataFromServer = in.readLine();
                 System.out.println(dataFromServer);
-                textArea.setText(dataFromServer);
+                textArea.appendText(dataFromServer + "\n");
                 textField.clear();
 
             } catch (Exception e) {
