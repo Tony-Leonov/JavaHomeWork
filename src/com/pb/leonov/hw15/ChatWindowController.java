@@ -3,7 +3,6 @@ package com.pb.leonov.hw15;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,8 +26,6 @@ public class ChatWindowController {
        // textArea.setText(textArea.getText() + "\n" + textField.getText());
        // textField.clear();
 
-
-        ////
         out.println("Клиент стартовал");
         String serverIp = "127.0.0.1";
         int serverPort = 1234;
@@ -36,21 +33,21 @@ public class ChatWindowController {
         out.print("Соединение успешно." +
                 "\nДля выхода из диалога, введите exit" +
                 "\nВведите сообщение: ");
-
         Socket server = new Socket(serverIp, serverPort);
+
+             
         BufferedReader inServer = new BufferedReader(new InputStreamReader(server.getInputStream()));
         PrintWriter outServer = new PrintWriter(server.getOutputStream(), true);
-        BufferedReader inConsole = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader in = new BufferedReader(new InputStreamReader(server.getInputStream()));
 
             try {
                 String dataFromUser, dataFromServer;
                 dataFromUser = textField.getText();
                 outServer.println(dataFromUser);
 
-                dataFromServer = inServer.readLine();
+                dataFromServer = in.readLine();
                 System.out.println(dataFromServer);
                 textArea.setText(dataFromServer);
-
                 textField.clear();
 
             } catch (Exception e) {
