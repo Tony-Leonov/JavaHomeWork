@@ -46,13 +46,14 @@ public class ChatWindowController {
             try {
                 String dataFromUser, dataFromServer;
                 dataFromUser = textField.getText();
-                out.println(dataFromUser);
-
+                outServer.println(dataFromUser);
 
                 dataFromServer = inServer.readLine();
-                textArea.setText(outServer + "\n"+ textField.getText());
+                System.out.println(dataFromServer);
+                //textArea.setText(outServer + "\n"+ textField.getText());
                 //textArea.setText(textArea.getText() + "\n" + textField.getText());
                 textField.clear();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
