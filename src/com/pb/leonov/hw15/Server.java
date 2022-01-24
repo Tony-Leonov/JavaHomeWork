@@ -11,7 +11,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Server {
-
     static class Handler implements Runnable {
         public final Socket socket;
 
@@ -33,13 +32,11 @@ public class Server {
                 // сокет для обслуживания клиента
                 Socket clientSocket = null;
 
-
                 // создаем потоки для связи с клиентом
                 assert clientSocket != null;
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 out = new PrintWriter(socket.getOutputStream(), true);
                 String clientMessage;
-
 
                 // цикл ожидания сообщений от клиента
                 System.out.println("Ожидаем сообщений");
@@ -59,7 +56,6 @@ public class Server {
                 in.close();
                 clientSocket.close();
                 server.close();
-
 
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -86,6 +82,5 @@ public class Server {
             Socket clientSocket = serverSocket.accept();
             threadPool.submit(new Handler(clientSocket));
         }
-
     }
 }
