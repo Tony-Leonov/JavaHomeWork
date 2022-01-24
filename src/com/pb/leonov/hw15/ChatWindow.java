@@ -11,7 +11,6 @@ import java.nio.file.Paths;
 
 public class ChatWindow extends Application {
 
-
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(Paths.get("D:\\Users\\dn100594lav\\IdeaProjects\\JavaHomeWork\\src\\com\\pb\\leonov\\hw15\\prog_chat.fxml").toUri().toURL());

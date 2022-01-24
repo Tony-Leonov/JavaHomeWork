@@ -9,8 +9,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import static java.lang.System.out;
-
 public class ChatWindowController {
     @FXML
     private TextField textField;
