@@ -17,19 +17,22 @@ public class ChatWindowController {
     @FXML
     private TextArea textArea;
 
+    public ChatWindowController() throws IOException {
+    }
+
     public TextField getTextField() {
         return textField;
     }
 
+   // out.println("Клиент стартовал");
+    String serverIp = "127.0.0.1";
+    int serverPort = 1234;
+        //out.println("Соединяемся с сервером " + serverIp + ":" + serverPort);
+
+    Socket server = new Socket(serverIp, serverPort);
+
     @FXML
     void handleSubmitButtonAction() throws IOException {
-
-        out.println("Клиент стартовал");
-        String serverIp = "127.0.0.1";
-        int serverPort = 1234;
-        out.println("Соединяемся с сервером " + serverIp + ":" + serverPort);
-
-        Socket server = new Socket(serverIp, serverPort);
 
         //BufferedReader inServer = new BufferedReader(new InputStreamReader(server.getInputStream()));
         PrintWriter outServer = new PrintWriter(server.getOutputStream(), true);

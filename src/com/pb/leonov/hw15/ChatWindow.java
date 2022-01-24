@@ -21,9 +21,5 @@ public class ChatWindow extends Application {
         stage.setTitle("Chat");
         stage.setScene(scene);
         stage.show();
-
-
-
-
     }
 }
